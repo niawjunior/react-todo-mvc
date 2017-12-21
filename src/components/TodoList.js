@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const TodoList = ({todos, showDone, toggleTodoDone})=>(
     <ul>
-     {todos.map(todo=>(
+     {todos.filter(todo=>!todo.done || showDone).map(todo=>(
          <li key={todo.id}>
             {todo.text}
             <input type="checkbox" onChange={()=>toggleTodoDone(todo)} checked={todo.done} />
