@@ -29,6 +29,13 @@ const reducer = (state = defaultState, action)=>{
             todos: [...state.todos,todo]
         }
     }
+
+    if (type === 'UPDATE_TODO') {
+        state = {
+            ...state,
+            todos:state.todos.map(_todo=>_todo.id === todo.id ? todo : _todo)
+        }
+    };
     return state;
 };
 export default ()=>createStore(reducer);
