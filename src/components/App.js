@@ -1,12 +1,13 @@
 import React from 'react';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
-
+import ShowDoneToggle from './ShowDoneToggle';
 const App = () =>(
   <div>
-    <h1>hello</h1>
+    <h1>React TodoApp MVC</h1>
     <TodoList/>
     <TodoInput/>
+    <ShowDoneToggle/>
   </div>
 )
 
